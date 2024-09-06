@@ -1,0 +1,57 @@
+{
+  "scores": [
+    {
+      "id": 5233920075,
+      "name": "bb_bmw",
+      "score": 312
+    },
+    {
+      "id": 662396814,
+      "name": "eric_littlebeastking",
+      "score": 4
+    },
+    {
+      "id": 6009477349,
+      "name": "Maggnonn",
+      "score": 9
+    },
+    {
+      "id": 7263462313,
+      "name": "Adesida0",
+      "score": 10
+    }
+  ],
+  "wallets": [
+    {
+      "id": 7263462313,
+      "name": "Adesida0",
+      "balance": 0
+    },
+    {
+      "id": 5233920075,
+      "name": "bb_bmw",
+      "balance": 995
+    },
+    {
+      "id": 6009477349,
+      "name": "Maggnonn",
+      "balance": 0,
+      "chatId": 6009477349
+    },
+    {
+      "userId": 5233920075,
+      "resources": 68
+    }
+  ],
+  "miners": [
+    {
+      "id": 7263462313
+    },
+    {
+      "id": 5233920075
+    },
+    {
+      "id": 6009477349
+    }
+  ]
+}

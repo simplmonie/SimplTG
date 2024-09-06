@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeJourney: Connections Through Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <header id="game-header">
+            <h1>TimeJourney: Connections Through Time</h1>
+        </header>
+
+        <main id="game-content">
+            <!-- Timeline Section -->
+            <section id="timeline">
+                <h3>Timeline</h3>
+                <div id="timeline-events"></div>
+            </section>
+
+            <!-- Main Gameplay Area -->
+            <section id="main-area">
+                <!-- Resource Display -->
+                <div id="resources">
+                    <div class="resource">
+                        <svg class="resource-icon"><use href="#icon-time-fragment"/></svg>
+                        <h4>Time Fragments</h4>
+                        <span id="time-fragments">0</span>
+                    </div>
+                    <div class="resource">
+                        <svg class="resource-icon"><use href="#icon-knowledge"/></svg>
+                        <h4>Knowledge</h4>
+                        <span id="knowledge">0</span>
+                    </div>
+                    <div class="resource">
+                        <svg class="resource-icon"><use href="#icon-gadgetry"/></svg>
+                        <h4>Gadgetry</h4>
+                        <span id="gadgetry">0</span>
+                    </div>
+                </div>
+
+                <!-- Inventory Display -->
+                <div id="inventory"></div>
+
+                <!-- Action Area -->
+                <section id="action-area">
+                    <h3 id="current-era">Current Era: Ancient Egypt</h3>
+                    <p id="event-description">You find yourself in the midst of Ancient Egypt. What will you do?</p>
+                    <div class="action-buttons">
+                        <button onclick="solveGPuzzle()"><i class="fas fa-puzzle-piece"></i> Solve Puzzle</button>
+                        <button onclick="gatherClue()"><i class="fas fa-search"></i> Gather Clue</button>
+                        <button onclick="mineTokens()"><i class="fas fa-coins"></i> Mine Tokens</button>
+                        <button onclick="timeTravel()"><i class="fas fa-clock"></i> Time Travel</button>
+                        <button onclick="toggleInventory()"><i class="fas fa-box-open"></i> Toggle Inventory</button>
+                    </div>
+
+                    <!-- Progress Bar for Mining -->
+                    <div id="progress-bar-container" style="display: none;">
+                        <div id="progress-bar"></div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+
+    <!-- SVG Icons -->
+    <svg style="display: none;">
+        <symbol id="icon-time-fragment" viewBox="0 0 24 24">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm1-13h-2v6l5.2 3.2.8-1.3-4-2.4V7z"/>
+        </symbol>
+        <symbol id="icon-knowledge" viewBox="0 0 24 24">
+            <path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zm0 14.2L3 13.1l1.7-1 7.3 4 7.3-4 1.7 1-9 5.1z"/>
+        </symbol>
+        <symbol id="icon-gadgetry" viewBox="0 0 24 24">
+            <path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14zM6 13h5v4H6zm6-6h4v3h-4zM6 7h5v5H6zm6 4h4v6h-4z"/>
+        </symbol>
+    </svg>
+</body>
+</html>
